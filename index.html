@@ -1,43 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <link rel="stylesheet" href="css/styles.css">
 
-        <link rel="stylesheet" href="css/styles.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>Personal Portfolio Webpage</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav-logo">Micol</a>
+            </div>
 
-        <title>Personal Portfolio Webpage</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid" id="navbar">
-                <div>
-                    <a href="#" class="nav__logo">Micol</a>
-                </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>       
+            </div>
+                
+            <div class="nav-toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+        
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#welcome-section" class="nav__link active" style="color: #fff">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link" style="color: #fff">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link" style="color: #fff">Skills</a></li>
-                        <li class="nav__item"><a href="#projects" class="nav__link" style="color: #fff">Projects</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link" style="color: #fff">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section id="welcome-section section" class="home bd-grid">
+    <main class="main">
+        <!-- Home -->
+         <section id="home section" class="home bd-grid">
                     <!-- effect wrap -->
                     <div class="effect-wrap">
                         <div class="effect effect-1"></div>
@@ -54,36 +53,36 @@
                 <div class="home__data">
                     <h1 class="home__title">Hi,<br>I am <span class="home__title-color">Micol</span><br> Web Designer</h1>
 
-                    <a href="#contact" class="button">Contact</a>
+                    <a href="#" class="button">Contact</a>
                 </div>
 
                 <div class="home__social">
-                    <a href="https://codepen.io/micol018" class="home__social-icon" target="_blank"><i class='bx bxl-codepen'></i></a>
-                    <a href="https://github.com/micol018" class="home__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
+                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://codepen.io/micol018" class="home__social-icon"><i class='bx bxl-codepen' ></i></a>
+                    <a href="https://github.com/micol018" class="home__social-icon"><i class='bx bxl-github' ></i></a>
                 </div>
 
-                <div class="home__img"> 
+                <div class="home__img">    
                     <div class="img-box">  
-                    <img src="img/profile7.png" alt="profile-pic">
-                    </div> 
-                </div>
-            </section>
-
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="img/about-img.png" alt="">
+                        <img src="img/profile7.png" alt="profile-pic">
                     </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I am Micol</h2>
-                        <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>           
-                    </div>                                   
                 </div>
-            </section>
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="about section " id="about">
+            <h2 class="section-title">About</h2>
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="img/about-img.png" alt="">
+                </div>
+                
+                <div class="about__content">
+                    <h2 class="about__subtitle">I am Micol</h2>
+                    <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates solu  aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>           
+                </div>                                   
+            </div>
+        </section>
 
             <!--===== SKILLS =====-->
             <section class="skills section" id="skills">
@@ -144,12 +143,12 @@
                     </div>
                     
                     <div>              
-                        <img src="img/skills.jpg" alt="" class="skills__img">
+                        <img src="img/skills.png" alt="" class="skills__img">
                     </div>
                 </div>
             </section>
 
-            <!--===== WORK =====-->
+            <!--===== Projects =====-->
             <section class="projects section" id="projects">
                 <h2 class="section-title">Projects</h2>
 

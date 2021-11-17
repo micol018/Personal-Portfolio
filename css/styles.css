@@ -1,28 +1,34 @@
-/*===== GOOGLE FONTS =====*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
-/*===== VARIABLES CSS =====*/
-:root{
+/*==============================Variables==============================*/
+:root {
   --header-height: 3rem;
   --font-semi: 600;
-}
-
-/*===== Colors =====*/
-:root{
+/*----------Margins----------*/
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+/*----------Colors----------*/
   --first-color: #8a49ff;
   --second-color: #0E2431;
-
+/*----------Shadows----------*/
   --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
   --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
   --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
-}
-
-/*===== Fonts =====*/
-:root{
+/*----------Z-Index----------*/
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+/*----------Fonts----------*/
   --body-font: 'Raleway', sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
 }
+
 @media screen and (min-width: 768px){
   :root{
     --big-font-size: 3.5rem;
@@ -31,25 +37,7 @@
   }
 }
 
-/*===== Margins =====*/
-:root{
-  --mb-1: 0.5rem;
-  --mb-2: 1rem;
-  --mb-3: 1.5rem;
-  --mb-4: 2rem;
-  --mb-5: 2.5rem;
-  --mb-6: 3rem;
-}
-
-/*===== z index =====*/
-:root{
-  --z-back: -10;
-  --z-normal: 1;
-  --z-tooltip: 10;
-  --z-fixed: 100;
-}
-
-/*===== BASE =====*/
+/*==============================Base==============================*/
 *,::before,::after{
   box-sizing: border-box;
 }
@@ -79,7 +67,7 @@ img{
   display: block;
 }
 
-/*===== CLASS CSS ===== */
+/*==============================Sections==============================*/
 .section-title{
   position: relative;
   font-size: var(--h2-font-size);
@@ -104,7 +92,7 @@ img{
   padding-bottom: 2rem;
 }
 
-/*===== LAYOUT =====*/
+/*==============================Layout==============================*/
 .bd-grid{
   max-width: 1024px;
   display: grid;
@@ -114,7 +102,8 @@ img{
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
 }
-.l-header{
+/*==============================Header==============================*/
+.header{
   width: 100%;
   position: fixed;
   top: 0;
@@ -123,8 +112,7 @@ img{
   background: linear-gradient(-35deg, #2f21ad, #e04b9c, #7f34a4);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
 }
-
-/*===== NAV =====*/
+/*==============================Navbar==============================*/
 .nav{
   height: var(--header-height);
   display: flex;
@@ -133,7 +121,7 @@ img{
   font-weight: var(--font-semi);
 }
 @media screen and (max-width: 768px){
-  .nav__menu{
+  .nav-menu{
     position: fixed;
     top: var(--header-height);
     right: -100%;
@@ -144,18 +132,19 @@ img{
     transition: .5s;
   }
 }
-.nav__item{
+
+.nav-item{
   margin-bottom: var(--mb-4);
 }
-.nav__link{
+.nav-link{
   position: relative;
   color: #fff;
   text-shadow: 2px 2px 4px #000000;
 }
-.nav__link:hover{
+.nav-link:hover{
   position: relative;
 }
-.nav__link:hover::after{
+.nav-link:hover::after{
   position: absolute;
   content: "";
   width: 100%;
@@ -164,12 +153,12 @@ img{
   top: 2rem;
   background-color: var(--first-color);
 }
-.nav__logo{
+.nav-logo{
   color: #fff;
   font-family: 'Raleway', sans-serif;
   text-shadow: 2px 2px 4px #000000;
 }
-.nav__toggle{
+.nav-toggle{
   color: var(--second-color);
   font-size: 1.5rem;
   cursor: pointer;
@@ -185,81 +174,31 @@ img{
   top: 2rem;
   background-color: var(--first-color);
 }
-
-/*=== Show menu ===*/
+/*Show menu*/
 .show{
   right: 0;
 }
 
-/*===== HOME =====*/
-.welcome-section{
-  height: calc(100vh - 3rem);
-  row-gap: 1rem;
-}
-.home__data{
-  align-self: center;
-}
-.home__title{
-  font-size: var(--big-font-size);
-  margin-bottom: var(--mb-5);
-}
-.home__title-color{
-  color: var(--first-color);
-}
-.home__social{
-  display: flex;
-  flex-direction: column;
-}
-.home__social-icon{
-  width: max-content;
-  margin-bottom: var(--mb-2);
-  font-size: 1.5rem;
-  color: var(--second-color);
-}
-.home__social-icon:hover{
-  color: var(--first-color);
-}
-.home__img{
-  position: absolute;
-  top: 180px;
-  left: 850px;
-  right: 140px;
-  bottom: 140;
-  width: 295px;
-}
 
-.img-box {
-  position: absolute;
-  max-width: 450px;
-  display: block;
-  margin: auto;
-  border-radius: 50%;
-  background: linear-gradient(-35deg, #2f21ad, #e04b9c);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1); 
-}
-
-.home__img .img-box img {
-  width: 100%;
-  border-radius: 50%;
-}
+/*==============================Effects==============================*/
 
 .effect-wrap .effect {
   position: absolute;
-  z-index: -1;
+  z-index: -10;
 }
 
 .effect-1 {
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
   border: 4px solid #8a49ff;
   right: 10%;
-  bottom: 10%;
+  bottom: 60%;
   animation: spin 10s linear infinite;
 }
 
 .effect-2 {
   left: 3%;
-  bottom: 20%;
+  top: 8%;
   width: 40px;
   display: flex;
   flex-wrap: wrap;
@@ -273,40 +212,39 @@ img{
   background-color: #8a49ff;
   margin: 0 3px 8px;
 }
-
 .effect-3 {
-  height: 180px;
-  width: 180px;
-  border: 25px solid #8a49ff;
+  height: 100px;
+  width: 100px;
+  border: 15px solid #8a49ff;
   border-radius: 50%;
   left: 50%;
-  top: -50px;
+  top: -20px;
   animation: leftBounce 3s ease-in-out infinite;
 }
 
 .effect-4 {
-  border-top: 60px solid transparent;
-  border-left: 60px solid #8a49ff;
+  border-top: 40px solid transparent;
+  border-left: 40px solid #8a49ff;
   left: 30%;
-  top: 20%;
+  top: 15%;
   animation: spin 15s linear infinite;
 }
 
 .effect-4:before {
   content: '';
-  border-top: 60px solid transparent;
-  border-left: 60px solid #8a49ff;
+  border-top: 40px solid transparent;
+  border-left: 40px solid #8a49ff;
   position: absolute;
   opacity: 0.5;
-  left: -35px;
-  top: -50px;
+  left: -45px;
+  top: -55px;
 }
 
 .effect-5 {
   height: 80px;
   width: 80px;
-  right: 10%;
-  top: 30%;
+  right: 20%;
+  top: 20%;
   display: flex;
   justify-content: space-between;
   border-radius: 50%;
@@ -315,7 +253,7 @@ img{
 }
 
 .effect-5 div {
-   width: 1.5px;
+   width: 0.75px;
    background-color: #8a49ff;
 }
 
@@ -333,7 +271,7 @@ img{
     transform: translateY(0);
   }
   50% {
-    transform: translateY(50px);
+    transform: translateY(45px);
   }
 }
 
@@ -346,10 +284,57 @@ img{
   }
 }
 
-/*BUTTONS*/
+/*==============================Home==============================*/
+.home{
+  height: calc(100vh - 3rem);
+  row-gap: 1rem;
+}
+.home__data{
+  align-self: center;
+}
+.home__title{
+  font-size: var(--big-font-size);
+  margin-bottom: var(--mb-5);
+}
+.home__title-color{
+  color: var(--first-color);
+}
+
+.home__social{
+  display: flex;
+  flex-direction: column;
+}
+.home__social-icon{
+  width: max-content;
+  margin-bottom: var(--mb-2);
+  font-size: 1.5rem;
+  color: var(--second-color);
+}
+.home__social-icon:hover{
+  color: var(--first-color);
+}
+.home__img{
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  width: 235px;
+}
+.img-box {
+  position: relative;
+  border-radius: 50%;
+  background: linear-gradient(-35deg, #2f21ad, #e04b9c);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1); 
+}
+
+.home__img .img-box img {
+  position: relative;
+  border-radius: 50%;
+}
+
+/*==============================Buttons==============================*/
 .button{
   display: inline-block;
-  background-color: white;
+  background-color: #fff;
   color: var(--first-color);
   padding: .75rem 2.5rem;
   font-weight: var(--font-semi);
@@ -376,7 +361,8 @@ img{
   box-shadow: var(--inner-shadow);
 }
 
-/* ===== ABOUT =====*/
+
+/*==============================About==============================*/
 .about__container{
   row-gap: 2rem;
   text-align: center;
@@ -393,8 +379,30 @@ img{
   background: linear-gradient(-35deg, #2f21ad, #e04b9c);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
 }
+.about__content {
+  color: #fff;
+  text-shadow: 2px 2px 4px #000000;
+  background: linear-gradient(-35deg, #2f21ad, #e04b9c);
+  padding: 100px;
+  animation: mymove 5s linear infinite;
+}
 
-/* ===== SKILLS =====*/
+@keyframes mymove {
+  0% {
+    border-radius: 29% 71% 70% 30% / 47% 56% 44% 53%;
+  }
+  25% {
+    border-radius: 47% 53% 36% 64% / 13% 72% 28% 87%;
+  }
+  75% {
+    border-radius: 80% 20% 87% 13% / 45% 41% 59% 55%;
+  }
+  100% {
+    border-radius: 29% 71% 70% 30% / 47% 56% 44% 53%;
+  }
+}
+
+/*==============================Skills==============================*/
 .skills__container{
   row-gap: 2rem;
   text-align: center;
@@ -447,11 +455,11 @@ img{
   width: 85%;
 }
 .skills__img{
-  border-radius: .5rem;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: auto;
 }
 
-/* ===== WORK =====*/
+/*==============================Projects==============================*/
 .work__container{
   row-gap: 2rem;
 }
@@ -518,9 +526,7 @@ img{
 }
 
 
-
-
-/* ===== CONTACT =====*/
+/*==============================Contact==============================*/
 .contact__input{
   width: 100%;
   font-size: var(--normal-font-size);
@@ -540,7 +546,7 @@ img{
   margin-left: auto;
 }
 
-/* ===== FOOTER =====*/
+/*==============================Footer==============================*/
 .footer{
   background: linear-gradient(-35deg, #2f21ad, #e04b9c);
   color: #fff;
@@ -561,7 +567,7 @@ img{
   margin: 0 var(--mb-2)
 }
 
-/* ===== MEDIA QUERIES=====*/
+/*==============================Media Queries==============================*/
 @media screen and (min-width: 768px){
   body{
     margin: 0;
@@ -581,19 +587,19 @@ img{
   .nav{
     height: calc(var(--header-height) + 1rem);
   }
-  .nav__list{
+  .nav-list{
     display: flex;
     padding-top: 0;
   }
-  .nav__item{
+  .nav-item{
     margin-left: var(--mb-6);
     margin-bottom: 0;
   }
-  .nav__toggle{
+  .nav-toggle{
     display: none;
   }
-  .nav__link{
-    color: var(--second-color);
+  .nav-link{
+    color: #fff;
   }
 
   .home{
@@ -613,8 +619,9 @@ img{
     margin-right: var(--mb-4);
   }
   .home__img{
-    width: 457px;
-    bottom: 15%;
+    left: 55%;
+    bottom: 30%;
+    width: 344px;
   }
 
   .about__container, .skills__container{
@@ -636,6 +643,59 @@ img{
   .contact__container{
     justify-items: center;
   }
+
+  .effect-wrap .effect {
+  position: absolute;
+  z-index: -1;
+  }
+  
+  .effect-1 {
+  width: 60px;
+  height: 60px;
+  right: 10%;
+  bottom: 10%;
+  }
+  
+ .effect-2 {
+  left: 3%;
+  top: 70%;
+  width: 40px;
+  height: 60px;
+  }
+
+  .effect-3 {
+  height: 180px;
+  width: 180px;
+  border: 25px solid #8a49ff;
+  left: 50%;
+  top: -50px;
+  }
+  
+  .effect-4 {
+  border-top: 60px solid transparent;
+  border-left: 60px solid #8a49ff;
+  left: 30%;
+  top: 20%;
+  }
+
+  .effect-4:before {
+  border-top: 60px solid transparent;
+  border-left: 60px solid #8a49ff;
+  left: -35px;
+  top: -50px;
+}
+  
+  .effect-5 {
+  height: 80px;
+  width: 80px;
+  right: 10%;
+  top: 30%;
+  }
+  
+  .effect-5 div {
+   width: 1.5px;
+  }
+
 }
 
 @media screen and (min-width: 1024px){

@@ -13,6 +13,10 @@
 /*----------Colors----------*/
   --first-color: #8a49ff;
   --second-color: #0E2431;
+  --bg-color: #fff;
+  --bt-color: #fff;
+  --tile-tcolor: #8a49ff;
+  --con-color: #fff;
 /*----------Shadows----------*/
   --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
   --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
@@ -37,6 +41,21 @@
   }
 }
 
+.darktheme {
+  --second-color: #fff;
+  --bg-color: #121212;
+
+  --bt-color: rgba(0,0,0, 0.1);
+
+  --tile-tcolor: #fff;
+
+  --con-color: #181818;
+
+  --outer-shadow: 1.5px 1.5px 1.5px #000;
+  --outer-shadow-0: 0 0 0 #000;
+  --inner-shadow: inset 1.5px 1.5px 1.5px #000;
+}
+
 /*==============================Base==============================*/
 *,::before,::after{
   box-sizing: border-box;
@@ -49,6 +68,7 @@ body{
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
+  background-color: var(--bg-color);
 }
 h1,h2,p{
   margin: 0;
@@ -159,9 +179,10 @@ img{
   text-shadow: 2px 2px 4px #000000;
 }
 .nav-toggle{
-  color: var(--second-color);
+  color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
+  box-shadow: 2px 2px 4px #000000;
 }
 
 /*Active menu*/
@@ -178,6 +199,18 @@ img{
 .show{
   right: 0;
 }
+
+#icon {
+  position: absolute;
+  top: 25%;
+  right: 10rem;
+  cursor: pointer;
+  -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+
+}
+
+
 
 
 /*==============================Effects==============================*/
@@ -334,9 +367,9 @@ img{
 /*==============================Buttons==============================*/
 .button{
   display: inline-block;
-  background-color: #fff;
+  background-color: var(--bt-color);
   color: var(--first-color);
-  padding: .75rem 2.5rem;
+  padding: .75rem 2rem;
   font-weight: var(--font-semi);
   border-radius: 30px;
   box-shadow: var(--inner-shadow);
@@ -422,7 +455,7 @@ img{
   padding: .5rem 1rem;
   margin-bottom: var(--mb-4);
   border-radius: .5rem;
-  box-shadow: 0 4px 25px rgba(14,36,49,.15);
+  box-shadow: var(--outer-shadow);
 }
 .skills__icon{
   font-size: 2rem;
@@ -464,8 +497,8 @@ img{
   row-gap: 2rem;
 }
 .work__img{
-  box-shadow: 0 4px 25px rgba(14,36,49,.15);
-  border-radius: 20px 20px 0 0;
+  box-shadow: var(--outer-shadow);
+  border-radius: 20px;
   overflow: hidden;
 }
 
@@ -518,11 +551,10 @@ img{
 }
 
 .details>h3 {
-  color: var(--first-color);
-  font-weight: 600;
+  color: var(--tile-tcolor);
+  font-weight: 700;
   font-size: 18px;
   margin: 10px 0 15px 0;
-  text-shadow: 1px 1px 1.5px #8a49ff;
 }
 
 
@@ -536,6 +568,7 @@ img{
   border: 1.5px solid var(--second-color);
   outline: none;
   margin-bottom: var(--mb-4);
+  background-color: var(--con-color);
 }
 .contact__button{
   display: block;

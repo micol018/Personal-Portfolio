@@ -24,7 +24,8 @@
                     <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
                     <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>       
+                    <li><img src="img/moon.svg" id="icon"></li>
+                </ul>   
             </div>
                 
             <div class="nav-toggle" id="nav-toggle">
@@ -53,7 +54,7 @@
                 <div class="home__data">
                     <h1 class="home__title">Hi,<br>I am <span class="home__title-color">Micol</span><br> Web Designer</h1>
 
-                    <a href="#" class="button">Contact</a>
+                    <a href="#" class="button">Download CV</a>
                 </div>
 
                 <div class="home__social">
@@ -222,6 +223,19 @@
             <p>&#169; 2021 copyright all right reserved</p>
         </footer>
 
+        <!--===== DARK THEME =====-->
+        <script type="text/javascript">
+            var icon = document.getElementById("icon");
+
+            icon.onclick = function(){
+              document.body.classList.toggle("darktheme");
+              if(document.body.classList.contains("darktheme")){
+                icon.src = "img/sun.svg";
+              }else{
+                icon.src = "img/moon.svg"; 
+              }
+            }
+        </script>
 
         <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>

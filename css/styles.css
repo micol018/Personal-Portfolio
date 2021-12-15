@@ -414,7 +414,7 @@ img{
   text-shadow: 2px 2px 4px #000000;
   background: linear-gradient(-35deg, #2f21ad, #e04b9c);
   padding: 100px;
-  animation: mymove 5s linear infinite;
+  animation: mymove 10s linear infinite;
 }
 
 @keyframes mymove {
@@ -479,7 +479,7 @@ img{
   width: 85%;
 }
 .skills__js{
-  width: 65%;
+  width: 20%;
 }
 .skills__ux{
   width: 85%;
